@@ -1,0 +1,25 @@
+body{
+margin: auto;
+}
+
+.box-list{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.box{
+  width: 100px;
+  height:100px;
+  background-color: aliceblue;
+  border: 1px solid blueviolet;
+}
+
+
+.two{
+  align-self: center;
+}
+
+.tree{
+  align-self: flex-end;
+}

@@ -1,0 +1,27 @@
+
+.mother {
+  height: 100vh;
+  border: 1px solid rgb(255, 0, 85);
+  display: flex;
+  position: relative; 
+  width: 100%; 
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  color: black;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.one{
+  margin-right: 5px;
+}
+.two {
+  display: flex;
+  position: absolute;
+  right: 0%;
+}
