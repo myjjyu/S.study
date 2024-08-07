@@ -10,6 +10,7 @@
 
 a{
   text-decoration: none;
+  
 }
 
 ul{
@@ -58,12 +59,18 @@ nav{
     float:left;   
     position: relative;  
 
+  
+
     a{
       display:block; 
       font-size:1.1em;
       color:#fff;  
       font-weight:600;  
-      padding:20px 60px;  
+      margin: auto;
+      padding:0 75px;
+      
+      
+
 
       &:hover{
         color: #1fa8f8;
@@ -96,8 +103,13 @@ nav{
 }
 
 
-/* 여기부터 하기 */
+
+
+
+
+
 .detail p {
+  
   line-height: 2.0;
   color:#222;
 }
@@ -115,35 +127,37 @@ nav{
 }
 .schedule ul li { 
   line-height: 2;
+
 }
 
 
-/******************/
-/*   푸터 영역    */
-/******************/
-
 footer{   
-  width:1200px;   /* 너비 */
-  height:100px;  /* 높이 */
+  width:1200px;   
+  height:100px;  
   border-top:2px solid #222;
+  margin-top: 100px;
 }
 #bottomMenu{
   width:100%;
   height:20px;
-  margin-left:60px;
+  margin-left:35%;
 }
 #bottomMenu ul {
-  margin-top:15px;  
+  margin-top:40px;  
 }
 #bottomMenu ul li{
-  float:left;  /* 가로로 배치 */ 
+  float:left;  
   padding:5px 20px;
-  border-right:1px solid #ddd;   /* 항목 오른쪽에 테두리 */ 
+  border-right:1px solid #ddd; 
+
 }
 #bottomMenu ul li:last-child{
-  border:none;  /* 마지막 항목에는 오른쪽 테두리 없음 */  
+  border:none; 
 }
 #bottomMenu ul li a, #bottomMenu ul li a:visited {  
-  font-size:15px;  /* 글자 크기 */ 
-  color:#666;   /* 글자 색 */ 
+  font-size:15px; 
+  color:#666;  
+  &:hover{
+    color: #1fa8f8;
+}
 } 
