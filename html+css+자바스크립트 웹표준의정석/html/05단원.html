@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>form요소</h1>
+    <form action="" autocomplete="off">
+      action : 내가 정보를 보내면 정보를 받는곳 / 자동완성 기능을 끄려면
+      autocomplete="off" 설정하기 (기본값이 on 이다)
+    </form>
+    <hr />
+    <form>
+      <fieldset>
+        <legend>상품 선택</legend>
+      </fieldset>
+      <fieldset>
+        <legend>배송 정보</legend>
+      </fieldset>
+    </form>
+    <hr />
+    <form>
+      <fieldset>
+        <label>아이디 <input type="text" id="user-id" size="5s" /></label>
+        <label>비밀번호 <input type="password" id="user-pw" size="5" /> </label>
+        <input type="submit" value="로그인" />
+      </fieldset>
+    </form>
+    <hr />
+    <form>
+      <fieldset>
+        <legend>배송정보</legend>
+        <ul>
+          <li>
+            <label for="user-name">이름</label>
+            <input type="text" id="user-name" />
+          </li>
+
+          <li>
+            <label for="add">배송 주소</label>
+            <input type="text" id="add" />
+          </li>
+
+          <li>
+            <label for="mail">이메일</label>
+            <input type="text" id="mail" />
+          </li>
+
+          <li>
+            <label for="phone">폰</label>
+            <input type="text" id="phone" />
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+    <hr />
+    <fieldset>
+      <legend>상품선택</legend>
+      <p><b>주문할 상품을 선택해 주세요</b></p>
+      <ul>
+        <li>
+          <label>
+            <input type="checkbox" name="pord" value="s_3" />선물용 3kg
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="pord" value="s_5" />선물용 5kg
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="pord" value="form" />가정용 3kg
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="pord" value="f_5" />가정용 5kg
+          </label>
+        </li>
+      </ul>
+
+      <p><b>포장 선택</b></p>
+      <ul>
+        <li>
+          <label>
+            <input type="radio" name="gift" value="yes" />선물 포장
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="gift" value="no" />선물 포장 안 함
+          </label>
+        </li>
+      </ul>
+    </fieldset>
+    <hr />
+    <h1>회원 가입을 환영합니다</h1>
+    <fieldset>
+      <legend>사용자 정보</legend>
+      <form action="#">
+        <ul>
+          <li>
+            <label for="user-id"
+              >아이디
+              <input
+                type="text"
+                name="user-id"
+                id="user-id"
+                placeholder="아이디를 입력하세요"
+              />
+            </label>
+          </li>
+          <li>
+            <label for="user-email"
+              >이메일
+              <input type="email" name="user-email" id="user-email" />
+            </label>
+          </li>
+          <li>
+            <label for="user-pw"
+              >비밀번호
+              <input type="password" name="user-pw" id="user-pw" />
+            </label>
+          </li>
+          <li>
+            <label for="user-pw2"
+              >비밀번호 확인
+              <input type="password" name="user-pw2" id="user-pw2" />
+            </label>
+          </li>
+        </ul>
+        <fieldset>
+          <legend>이벤트와 새로운 소식</legend>
+          <input type="radio" name="mail" id="mail1" value="yes" />
+          <label for="mail1">메일수신</label>
+
+          <input type="radio" name="mail" id="mail2" value="no" />
+          <label for="mail2">메일수신 안 함</label>
+        </fieldset>
+        <div style="margin-top: 10px">
+          <input type="submit" value="가입하기" />
+          <input type="reset" value="취소" />
+        </div>
+      </form>
+    </fieldset>
+
+    <hr />
+    <form>
+      <label for="number">숫자키우기</label>
+      <input
+        type="number"
+        name="number"
+        id="number"
+        min="0"
+        max="100"
+        value="0"
+      />
+    </form>
+
+    <form>
+      <label for="volum">볼륨 조절하기</label>
+      <input
+        type="range"
+        name="volum"
+        id="volum"
+        min="0"
+        max="100"
+        value="50"
+      />
+    </form>
+
+    <form>
+      <!-- min max 설정 가능함 -->
+      <label for="data">날짜입력</label>
+      <input type="date" name="data" id="data" />
+    </form>
+    <form>
+      <label for="month">날짜입력2</label>
+      <input type="month" name="month" id="month" />
+    </form>
+    <form>
+      <label for="week">날짜입력3</label>
+      <input type="week" name="week" id="week" />
+    </form>
+    <form>
+      <label for="time">시간입력</label>
+      <input type="time" name="time" id="time" />
+    </form>
+    <form>
+      <label for="datetime-local">시간+날짜입력</label>
+      <input type="datetime-local" name="datetime-local" id="datetime-local" />
+    </form>
+    <hr />
+    <form action="#">
+      <label for="id"
+        >아이디 :
+        <input type="text" name="id" id="id" />
+      </label>
+      <label for="pw"
+        >비밀번호 :
+        <input type="password" name="pw" id="pw" />
+      </label>
+      <label for="img">
+        <input
+          type="image"
+          name="img"
+          id="img"
+          src="./img/login.png"
+          alt="이미지 "
+        /> </label
+      ><br /><br />
+      <label for="button">
+        <input
+          type="button"
+          value="공지창열기"
+          onclick="window.open('noice.jpg' ,'_blank', 'width=300,hegiht=400')"
+        />
+      </label>
+    </form>
+    <hr />
+    <form action="#" method="post">
+      <p>만일 수령한 상품에 문제가 있다면 즉시 <b>반품신청</b>해 주세요</p>
+      <p>반품 신청시 상품의 상태를 사진으로 첨부해주세요</p>
+      <br />
+      <input type="file" />
+      <hr />
+    </form>
+    <hr />
+    <h1>회원가입을 환영합니다</h1>
+    <form action="#">
+      <fieldset>
+        <legend>사용자 정보</legend>
+
+        <ul>
+          <li>
+            <label for="id"
+              >아이디
+              <input
+                type="text"
+                name="id"
+                id="id"
+                autofocus
+                placeholder="4자 ~ 10자 사이, 공백 없이"
+                required
+              />
+            </label>
+          </li>
+          <li>
+            <label for="email"
+              >이메일
+              <input type="email" name="email" id="email" required />
+            </label>
+          </li>
+          <li>
+            <label for="pw"
+              >비밀번호
+              <input
+                type="password"
+                name="password"
+                id="password"
+                required
+                placeholder="문자와 숫자, 특수 기호 포함"
+              />
+            </label>
+          </li>
+          <li>
+            <label for="pw_check"
+              >비밀번호 확인
+              <input type="password" name="pw_check" id="pw_check" required />
+            </label>
+          </li>
+          <li>
+            <label for="data"
+              >배송지정
+              <input type="date" name="data" id="data" />
+            </label>
+            <small> (주문일로부터 최소 3일 이후)</small>
+          </li>
+          <li>
+            <label for="prod2">
+              가입경로
+              <select id="prod1">
+                <option value="prod1">블로그</option>
+                <option value="prod1">카페</option>
+                <option value="prod1">페이스북</option>
+                <option value="prod1">인스타그램</option>
+              </select>
+            </label>
+            <br />
+          </li>
+
+          <li>
+            <label for="memo"
+              >메모
+              <textarea
+                name="memo"
+                id="memo"
+                cols="20"
+                required
+                placeholder="남길말씀이 있다면 여기에"
+              ></textarea>
+            </label>
+          </li>
+        </ul>
+
+        <label for="prod1"
+          >상품선택
+          <select id="prod1">
+            <option value="prod1">선물용3kg</option>
+            <option value="prod1">선물용5kg</option>
+            <option value="prod1">가정용3kg</option>
+            <option value="prod1">가정용5kg</option>
+          </select>
+        </label>
+
+        <label for="prod2">
+          가입경로
+          <select id="prod1">
+            <option value="prod1">블로그</option>
+            <option value="prod1">카페</option>
+            <option value="prod1">페이스북</option>
+            <option value="prod1">인스타그램</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>이벤트와 새로운 소식</legend>
+        <input type="radio" name="email" id="email" />
+        <label for="email"> 메일수신 </label>
+        <input type="radio" name="email" id="email" required />
+        <label for="email"> 메일 수신 안 함 </label>
+      </fieldset>
+      <div style="margin-top: 10px">
+        <input type="submit" value="가입하기" />
+        <input type="reset" value="취소" />
+      </div>
+      <div>
+        <button type="submit">주문하기</button>
+        <button type="reset">취소하기</button>
+      </div>
+    </form>
+
+    <fieldset>
+      <h1>프런트엔드 개발자 지원서</h1>
+      <p>
+        HTML, CSS, 자바스크립트의 기술을 이해하고 실무 경험이 있는 분을 찾습니다
+      </p>
+      <hr />
+      <form action="#">
+        <b>개인정보</b>
+        <ul style="list-style: none">
+          <li>
+            <label for="name"
+              >이름
+              <input
+                type="text"
+                placeholder="공백 없이 입력하세요."
+                autofocus
+                required
+              />
+            </label>
+          </li>
+          <li>
+            <label for="number"
+              >연락처
+              <input type="number" required />
+            </label>
+          </li>
+        </ul>
+        <b>지원 분야</b>
+        <ul style="list-style: none">
+          <li>
+            <input type="radio" name="check" id="check1" />
+            <label for="check">웹 퍼블리싱</label>
+          </li>
+          <li>
+            <input type="radio" name="check" id="check2" />
+            <label for="check">웹 애플리케이션 개발</label>
+          </li>
+          <li>
+            <input type="radio" name="check" id="check3" />
+            <label for="check">개발 환경 개선</label>
+          </li>
+        </ul>
+
+        <b>지원 분야</b>
+        <br />
+        <textarea
+          name="memo"
+          id="memo"
+          rows="5"
+          cols="50"
+          placeholder="본사 지원 동기를 간략히 써 주세요"
+        ></textarea>
+
+        <div style="margin-top: 10px">
+          <button type="submit">접수하기</button>
+          <input type="reset" value="다시쓰기" />
+        </div>
+      </form>
+    </fieldset>
+  </body>
+</html>
