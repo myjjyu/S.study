@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      .nav {
+        /* border: 1px solid red; */
+        text-align: center;
+        padding: 10px;
+      }
+      .nav h2,
+      .nav p {
+        color: rgb(128, 128, 126);
+        line-height: 40px;
+      }
+      .container {
+        /* border: 1px solid rgb(44, 6, 6); */
+      }
+
+   
+
+      .container .card {
+        display: flex;
+        margin: auto;
+        width: 1200px;
+        justify-content: center;
+        gap: 10px;
+      }
+      .card_list {
+        height:350px ;
+        margin-top: 30px;
+        text-align: center;
+        border: 1px solid rgb(225, 224, 224);
+        border-radius: 25px;
+        text-decoration: none;
+        padding-top: 20px;
+      }
+      .card_list a {
+        display: block;
+        text-decoration: none;
+      }
+
+      .img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 1px solid rgb(225, 224, 224);
+        transition: transform 0.3s ease;
+      }
+
+      .img:hover {
+        transform: scale(1.1);
+      }
+
+      .card_list h3,
+      .card_list p {
+        width: 250px;
+        color: rgb(128, 128, 126);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 20px;
+        margin: 0 auto; /* 가운데 정렬 */
+        text-align: center; /* 텍스트 가운데 정렬 */
+      }
+      
+   
+
+      /* 미디어 쿼리 */
+      @media (max-width: 768px) {
+        .container .card {
+          flex-direction: column; /* 작은 화면에서는 세로 배치 */
+          width: 100%;
+        }
+      }
+    </style>
+  
+  </head>
+  <body>
+    <div class="nav">
+      <h2>여가 시간 즐기기</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi error,
+      </p>
+    </div>
+
+    <div class="container">
+      <ul class="card">
+        <li class="card_list">
+          <a href="#">
+            <img src="../img/tr-1.png" class="img" />
+            <h3>도심투어</h3>
+            <p>Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet </p>
+          </a>
+        </li>
+
+        <li class="card_list">
+          <a href="#">
+            <img src="../img/tr-2.png" class="img" />
+            <h3>바다즐기기</h3>
+            <p>Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet </p>
+          </a>
+        </li>
+
+        <li class="card_list">
+          <a href="#">
+            <img src="../img/tr-3.png" class="img" />
+            <h3>등산 도전하기</h3>
+            <p>Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet </p>
+          </a>
+        </li>
+
+        <li class="card_list">
+          <a href="#">
+            <img src="../img/tr-4.png" class="img" />
+            <h3>관광지 투어</h3>
+            <p>Lorem ipsum dolor sit amet consecteturLorem ipsum dolor sit amet </p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
