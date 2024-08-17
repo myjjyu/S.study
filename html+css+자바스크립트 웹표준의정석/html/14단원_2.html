@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Animation</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        width: 450px;
+        padding: 10px;
+        border: 1px solid #222;
+      }
+
+      .box {
+        width: 50px;
+        height: 50px;
+        background-color: #ffe867;
+        animation: moveAndColorChange 3s infinite alternate ease-in-out;
+        /* 애니메이션 : 이름 초 무한반복 되감기 천천히갔다가 천천히 돌아와 */
+      }
+
+      @keyframes moveAndColorChange {
+        0% {
+          transform: translateX(0);
+          background-color: #ffe867;
+        }
+        50% {
+          transform: translateX(200px); /* 중간에 잠깐 멈춤? 해주는거임 없으면? 그냥 쭉~ 감*/
+          background-color: #ff5e62;
+        }
+        100% {
+          transform: translateX(400px);
+          background-color: #17bdff;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
