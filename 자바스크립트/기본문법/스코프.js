@@ -20,3 +20,6 @@ console.log(str);  // "sum 함수 스코프"가 출력됩니다.
 (function(num1,num2){
   return num1+num2;
 })(10,20); //30 
+
+
+
