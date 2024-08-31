@@ -123,3 +123,26 @@ temp("새로운 값"); // "화살표 함수의 this.str: undefined"를 출력
 // 이미 바인딩 된 것은 다시 바인딩 불가 
 // => 암시적, 명시적이던 재바인딩 불가하다.
 
+
+
+let user = {name : "john"};
+let admin = {name : "admin"};
+
+function hello_func(){
+  console.log("hello" + this.name);
+}
+
+user.func = hello_func;
+admin.func = hello_func;
+
+user.func();
+admin.func();
+
+user["func"];
+admin["func"];
+
+let x = "123";
+console.log(typeof(x));
+console.log(isNaN ("123"));
+
+console.log("line\nfeed"); 

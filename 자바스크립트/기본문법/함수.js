@@ -92,3 +92,23 @@ console.log(calculate(8, 2));
 
 console.log(calculate(10, 0));
 // 출력: { addition: 10, subtraction: 10, multiplication: 0, division: "Cannot divide by zero" }
+
+
+// 두정수를 받아 가장 큰 값을 출력해주는 함수 작성
+function max(x,y)
+
+//일반 조건문으로 풀이 
+{
+if( x > y){
+  return x;
+}else { 
+  return y;
+}
+};
+
+//삼항 연산자로 풀이 
+{return x > y ? x : y;};
+
+console.log(max(0,3));
+console.log(max(-1,5));
+console.log(max(100,7));

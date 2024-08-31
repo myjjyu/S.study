@@ -44,6 +44,7 @@ console.log(simArr.length + "\n" + typeof simArr);
 
 // slice : 시작과 끝 범위 요소를 잘라서 새로운 배열생성
 // 선택한 인덱스부터 시작해서 선택한 인덱스 전까지 의 추출물을 뽑는다 
+// 원본에 영향을 미치지 않는다!! 아예 새로운 배열이 생기는거기 때문에
 let simArr = ["사과", "바나나", "딸기", "복숭아", "수박"];
 // let rtn = simArr.slice(1,3); // 바나나, 딸기
 // let rtn = simArr.slice(-2); // 복숭아, 수박
@@ -55,11 +56,24 @@ console.log(simArr.length);
 console.log(rtn.length + "\n" + typeof rtn);
 
 // splice :  배열의 기존 요소 삭제 또는 변경 또는 추가
+// 원본에 영향감 
 let simArr = ["사과", "바나나", "딸기", "복숭아", "수박"];
 let rtn = simArr.splice(1, 2, "오렌지", "망고");
 
 console.log(simArr);
 console.log(simArr.length + "\n" + typeof rtn);
+
+
+fruits = ['가',"나","디","라",'마',"바","사","아"]
+let x;
+
+x = fruits.splice(1,5); // 인덱스 1번째부터  배열 5개 삭제 
+console.log(x);
+console.log(fruits);
+
+x = fruits.splice(1,5, "길쥬", "경환"); // 인덱스 1번째부터  배열 5개 삭제  와 동시에 삭제된 자리에 다른거 추가
+console.log(x);
+console.log(fruits);
 
 for (let i = 0; i < simArr.length; i++) {
   console.log(simArr[i]);
