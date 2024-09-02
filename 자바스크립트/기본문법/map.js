@@ -10,9 +10,9 @@ console.log(map.get("name"));
 console.log(map.get(true));
 console.log(map.size);
 
-map.delete(123);
+map.delete(123); // 개별삭제
 console.log(map);
-map.clear();
+map.clear(); // 전ㅔ 삭제
 console.log(map);
 // new Map(): 빈 Map 객체를 만듭니다.
 // map.set(key, value): Map에 키와 값을 추가합니다.
@@ -34,13 +34,13 @@ let recipe_juice =new Map([
 ]);
 
 for (let item of recipe_juice.keys()){
-  console.log(item);
+  console.log(item); // 키값 반환
 };
 
 for (let amount of recipe_juice.values()){
-  console.log(amount);
+  console.log(amount); // 값 반환
 };
 
-for (let entity of recipe_juice){
-  console.log(entity);
+for (let entity of recipe_juice){ 
+  console.log(entity);  // 전체반환
 };

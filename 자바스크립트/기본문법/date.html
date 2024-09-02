@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-time Clock</title>
+  </head>
+  <body>
+    <h1 id="clock"></h1>
+
+    <script>
+      function updateClock() {
+        //function updateClock() { ... }: updateClock이라는 이름의 함수를 정의해요. 이 함수는 현재 시간을 가져와서 화면에 표시하는 역할을 해요.
+        let now = new Date(); //let now = new Date();: 현재 날짜와 시간을 가져와 now라는 변수에 저장해요.
+       
+       
+        // 날짜부분
+        let year = now.getFullYear();
+        let month = String(now.getMonth() + 1).padStart(2, "0"); // 월은 0부터 시작하므로 +1
+        let date = String(now.getDate()).padStart(2, "0");
+        //let year = now.getFullYear();: 현재 연도를 가져와서 year 변수에 저장해요.
+        // let month = String(now.getMonth() + 1).padStart(2, '0');: 현재 월을 가져오는데, getMonth()는 0부터 시작하니까 +1을 해줘요. 두 자리로 만들기 위해 padStart를 사용해요.
+        // let date = String(now.getDate()).padStart(2, '0');: 현재 날짜(일)를 가져와서 두 자리 숫자로 만듭니다.
+
+
+        // 시간 부분
+        let hours = String(now.getHours()).padStart(2, "0");
+        //let hours = String(now.getHours()).padStart(2, '0');: 현재 시간을 24시간 형식으로 가져와요.
+        //padStart(2, '0')는 시간이 한 자리 숫자일 때 앞에 0을 붙여 두 자리로 만들어요 (예: 9 → 09).
+
+        let minutes = String(now.getMinutes()).padStart(2, "0");
+        //let minutes = String(now.getMinutes()).padStart(2, '0');: 현재 분을 가져와서 마찬가지로 두 자리로 만들어요.
+
+        let seconds = String(now.getSeconds()).padStart(2, "0");
+        //let seconds = String(now.getSeconds()).padStart(2, '0');: 현재 초를 가져와서 두 자리로 만들어요.
+
+        let timeString = `${year}년 ${month}월 ${date}일 ${hours}시 ${minutes}분 ${seconds}초`;
+        //let timeString = ${year}-${month}-${date} ${hours}:${minutes}:${seconds};: 연, 월, 일과 시, 분, 초를 합쳐서 YYYY-MM-DD HH:MM:SS 형식의 문자열로 만들어요.
+
+        document.getElementById("clock").textContent = timeString;
+      } //document.getElementById('clock').textContent = timeString;: HTML에서 id가 "clock"인 요소를 찾아서 그 안에 timeString을 넣어, 화면에 시간을 보여줘요.
+
+      // Update the clock immediately and then every second
+      updateClock(); //updateClock();: 페이지가 로드되자마자 updateClock() 함수를 호출해 현재 시간을 처음으로 표시해요.
+      setInterval(updateClock, 1000);
+      //setInterval(updateClock, 1000);: updateClock 함수를 1초(1000밀리초)마다 한 번씩 실행되도록 설정해요. 이걸 통해 시간이 계속 업데이트돼요.
+    </script>
+  </body>
+</html>
