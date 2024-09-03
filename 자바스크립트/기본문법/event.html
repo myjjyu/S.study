@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width='device-width', initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="count-up-button">+1</button>
+  <span>0</span>
+
+  <script>
+   const[count] =  document.getElementsByTagName ('span');
+   const countUPbutton = document.querySelector("#count-up-button");
+   countUPbutton.addEventListener('click',e=>{
+   if(isNaN(Number(count.innerHTML)))
+   return;
+  count.innerHTML = Number(count.innerHTML)+1;
+   });
+
+   document.addEventListener("mousemove",e=>{
+    count.style.backgroundColor="red";
+    count.style.color="white";
+   })
+  
+
+   document.addEventListener("mouseout",(e)=>{
+    count.style.backgroundColor="";
+    count.style.color="black";
+   })
+  
+  
+  </script>
+</body>
+</html>
