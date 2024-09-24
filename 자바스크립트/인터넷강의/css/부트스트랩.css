@@ -1,0 +1,6 @@
+.list-group {
+  display: none; /* 기본적으로 숨김 */
+}
+.show {
+  display: block; /* show 클래스가 있을 때 표시 */
+}
