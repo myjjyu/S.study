@@ -26,8 +26,29 @@ document.querySelector(".btn-primary").addEventListener("click", e =>{
   } else if(password.value == ''){
     e.preventDefault();
     alert("비밀번호를 입력해주세요");
-  } else if( 비번이 6자리 미만이면 ){
+  } else if(password.value.length <6 ){
     e.preventDefault();
     alert("비밀번호는 6자리 이상입니다");
   }
 });
+  
+
+
+//제이쿼리 사용 버전
+$('form').on('submit',function(e){
+  if(document.querySelector(".user-id").value == ''){
+    e.preventDefault();
+    alert('아이디를 입력해주세요');
+  } else if(document.querySelector(".password").value == ''){
+    e.preventDefault();
+    alert('비밀번호를 입력해주세요');
+  } else if(document.querySelector(".password").value.length < 6){
+    e.preventDefault();
+    alert("비밀번호는 6자리 이상입니다");
+  }
+});
+
+//이벤트리스너 콜백함수에 e라는 파라미터 추가해주고 e.preventDefault() 라고 쓰면 폼전송 안됨
+
+//사용자가 Input에 입력한 값을 가지고올수있음 콘솔창에서 확인 가능
+// document.getElementById("email").value;
